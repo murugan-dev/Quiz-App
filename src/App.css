@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  flex-direction: column;
+}
+.question-container {
+  height: 40%;
+  max-width: 80%;
+  border: 2px solid rgb(190, 186, 186);
+  padding: 40px;
+  border-radius: 10px;
+}
+.options {
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+  margin-top: 50px;
+}
+.options > li > button {
+  height: 40px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  outline: none;
+  background-color: rgb(190, 186, 186);
+  border-radius: 5px;
+  color: black;
+  font-weight: 900;
+  cursor: pointer;
+}
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.result-container > ul > li {
+  margin-top: 10px;
+  list-style: none;
+}
+
+.result-container button {
+  width: max-content;
+  padding: 10px;
+  border: none;
+  outline: none;
+  color: red;
+  font-weight: 700;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.result-container > ul > li[data-correct='true'] {
+  color: green;
+}
+
+.result-container > ul > li[data-correct='false'] {
+  color: red;
+}

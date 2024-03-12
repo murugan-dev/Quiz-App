@@ -1,0 +1,88 @@
+[
+  {
+    "question": "What is the front-end library?",
+    "options": [
+      { "option": "Angular", "isCorrect": false },
+      { "option": "Vue", "isCorrect": false },
+      { "option": "React", "isCorrect": true },
+      { "option": "Nuxt3", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Below mention what is not programming language?",
+    "options": [
+      { "option": "CSS", "isCorrect": true },
+      { "option": "java", "isCorrect": false },
+      { "option": "Python", "isCorrect": false },
+      { "option": "c", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which kind of basic principle to follow the javaScript?",
+    "options": [
+      { "option": "ECMA Script", "isCorrect": true },
+      { "option": "HTML and CSS", "isCorrect": false },
+      { "option": "WEB Api", "isCorrect": false },
+      { "option": "Broswer", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Is HTML programming programming language ?",
+    "options": [
+      { "option": "TRUE", "isCorrect": false },
+      { "option": "FALSE", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Which company maintain the react libry?",
+    "options": [
+      { "option": "Google", "isCorrect": false },
+      { "option": "Netflix", "isCorrect": false },
+      { "option": "amzon", "isCorrect": false },
+      { "option": "facebook", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Javascript is Asynchronous Language?",
+    "options": [
+      { "option": "True", "isCorrect": false },
+      { "option": "False", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "What are variable have the Javascript?",
+    "options": [
+      { "option": "let", "isCorrect": false },
+      { "option": "Var", "isCorrect": false },
+      { "option": "const", "isCorrect": false },
+      { "option": "All the above", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "what datatype not have the prototype in javascript?",
+    "options": [
+      { "option": "Array", "isCorrect": false },
+      { "option": "Object", "isCorrect": false },
+      { "option": "Primitive Datatypes", "isCorrect": true },
+      { "option": "None of Above", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Below metioned which not a primitive data type in javascript?",
+    "options": [
+      { "option": "undefined", "isCorrect": false },
+      { "option": "null", "isCorrect": false },
+      { "option": "symbol", "isCorrect": false },
+      { "option": "None of Above", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "javascript what machnism to follow memory allocating?",
+    "options": [
+      { "option": "Closure", "isCorrect": false },
+      { "option": "Hositing", "isCorrect": true },
+      { "option": "Prototype chaining", "isCorrect": false },
+      { "option": "polyfill", "isCorrect": false }
+    ]
+  }
+]

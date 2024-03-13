@@ -3,6 +3,8 @@ import './App.css';
 import questions from "./constant/question.json"
 import Questions from "./component/Questions.jsx"
 import Results from "./component/Results.jsx"
+import Initial from "./component/Initial.jsx";
+
 function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState([])
@@ -11,22 +13,31 @@ function App() {
     setCurrentQuestion(prev => prev +1)
     setUserAnswers([...userAnswers, isCorrect])
   }
+
   const handleResetQuiz = () =>{
-    setCurrentQuestion(0);
+    setCurrentQuestion(1);
     setUserAnswers([])
   }
+
+  const startQuiz = (val) =>{
+    setCurrentQuestion(val)
+  }
+
   return (
     <>
       <h1>Welcome TO Quiz</h1>
       <div className="App">
+
+
         {/* Questions Component*/}
 
-        {currentQuestion < questions.length &&        
-        <Questions question={questions[currentQuestion]} onAnswerClick={handleNextQuestion}/>
+        { (currentQuestion === 0 && <Initial startQuiz={startQuiz}/>) 
+        }
+        {
+          currentQuestion !== 0 && currentQuestion <= questions.length  && <Questions question={questions[currentQuestion - 1]} onAnswerClick={handleNextQuestion}/>
         }
         {/* Results Component*/}
-        {userAnswers.length === questions.length &&
-        
+        {userAnswers.length === questions.length &&        
         <Results 
           userAnswer = {userAnswers}
           questions = {questions}

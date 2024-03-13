@@ -7,15 +7,24 @@ import Initial from "./component/Initial.jsx";
 
 function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [userAnswers, setUserAnswers] = useState([])
+  const [userAnswers, setUserAnswers] = useState([]);
 
-  const handleNextQuestion = (isCorrect) =>{
-    setCurrentQuestion(prev => prev +1)
-    setUserAnswers([...userAnswers, isCorrect])
+
+  const collectUserAnswers = (isCorrect) => {
+    setUserAnswers(prevAnswers => {
+      const updatedAnswers = [...prevAnswers];
+      updatedAnswers[currentQuestion - 1] = isCorrect;
+      return updatedAnswers;
+    });
+  };
+
+  const handleNextQuestion = () =>{
+    setCurrentQuestion(prev => prev + 1)
+    console.log(userAnswers)
   }
 
   const handleResetQuiz = () =>{
-    setCurrentQuestion(1);
+    setCurrentQuestion(0);
     setUserAnswers([])
   }
 
@@ -34,7 +43,10 @@ function App() {
         { (currentQuestion === 0 && <Initial startQuiz={startQuiz}/>) 
         }
         {
-          currentQuestion !== 0 && currentQuestion <= questions.length  && <Questions question={questions[currentQuestion - 1]} onAnswerClick={handleNextQuestion}/>
+          currentQuestion !== 0 && currentQuestion <= questions.length  && 
+          < Questions question={questions[currentQuestion - 1]} onAnswerClick={collectUserAnswers} 
+          nextQuestion = {handleNextQuestion}
+          questions = {questions}/>
         }
         {/* Results Component*/}
         {userAnswers.length === questions.length &&        

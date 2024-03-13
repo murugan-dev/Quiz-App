@@ -73,3 +73,14 @@ h1 {
 .result-container > ul > li[data-correct='false'] {
   color: red;
 }
+
+.Initial-component > button{
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: blueviolet;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+}

@@ -8,6 +8,8 @@ import Initial from "./component/Initial.jsx";
 function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
+  const [resultComponent, setResultComponent] = useState(1)
+  
 
 
   const collectUserAnswers = (isCorrect) => {
@@ -46,10 +48,10 @@ function App() {
           currentQuestion !== 0 && currentQuestion <= questions.length  && 
           < Questions question={questions[currentQuestion - 1]} onAnswerClick={collectUserAnswers} 
           nextQuestion = {handleNextQuestion}
-          questions = {questions}/>
+          questions = {questions} getQuestionContext={setResultComponent}/>
         }
         {/* Results Component*/}
-        {userAnswers.length === questions.length &&        
+        { resultComponent >  questions.length &&        
         <Results 
           userAnswer = {userAnswers}
           questions = {questions}
